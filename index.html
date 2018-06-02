@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style> 
+      .aTop {
+        margin-top:30px;
+      }
+      .formHead {
+        margin-bottom:30px;
+      }
+      .formCon{
+        border:1px solid black;
+        border-radius:25px;
+        width:300px;
+        padding:20px 20px 20px 20px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:30px;
+      }
+      .tabler {
+        width:300px;
+        margin-left:auto;
+        margin-right:auto;
+      }
+      .console {
+        color:blue;
+      }
+      .ud {
+        text-decoration:underline;
+      }
+    </style>
+    <title>RegCUViewer Client</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Unofficial RegCUViewer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://github.com/poomrokc/RegCUViewerUnofficialClient">Source code && DIY tutorial if you don't trust me :)</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          By PoomrokC
+        </span>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="alert alert-info aTop" role="alert">
+        <b>Version</b> : 0.1.0 Alpha<br><b>Features</b><br>- View your grade<br>- Auto retry on failure<br><b>Disclaimer</b><br>I can guarantee that I do not collect any information from users , but use at your own risk. I WILL NOT take ANY responsibility for any damage done by using my service.<br>-PoomrokC
+      </div>
+      <div class="formCon">
+        <h1 class="text-center formHead">Start</h1>
+        <form>
+          <div class="form-group">
+            <label for="nisitid">รหัสนิสิต</label>
+            <input type="text" class="form-control" id="nisitid" aria-describedby="emailHelp" placeholder="รหัสนิสิต 10 หลัก">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+      <h6 class="aTop text-center formHead console" id="console">Status : Idle</h6>
+      <h4 class="aTop text-center formHead">Step 1 : User Information</h4>
+      <div class="aTop formHead text-center tabler" id="step1data">Waiting for Data...</div>
+      <h4 id="step2" class="aTop text-center formHead">Step 2 : Your Grades</h4>
+      <div class="aTop formHead text-center" id="step2data">Waiting for Data...</div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="regcuviewer.js"></script>
+  </body>
+</html>
