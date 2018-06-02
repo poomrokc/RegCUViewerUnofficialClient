@@ -1,10 +1,8 @@
-﻿var tries=1;
 var proxy = 'https://cryptic-headland-94862.herokuapp.com/';
 var token ="";
 $(document).ready(function(){
-    function getGrade() {
+    function getGrade(tries) {
         $('html, body').animate({scrollTop:$('#console').position().top}, 'slow');
-        tries=1;
         $("#console").text("Status : Getting Step 2 grades (Attempt #"+tries.toString()+")...");
         $.ajax({
             type: "POST",
@@ -39,17 +37,15 @@ $(document).ready(function(){
                 }
             },
             error: function () {
-                tries+=1;
                 setTimeout(function () {
-                    getGrade();
+                    getGrade(tries+1);
                 }, 1000)
             }
         });
     }
-    function getToken(data) {
+    function getToken(data,tries) {
         $("#step2data").html("Waiting for data...");
         $("#step1data").html("Waiting for data...");
-        tries=1;
         $("#console").text("Status : Getting Step 1 token (Attempt #"+tries.toString()+")...");
         $.ajax({
             type: "POST",
@@ -60,7 +56,7 @@ $(document).ready(function(){
                 if(res.code==200) {
                   token=res.data.token;
                   $("#step1data").html("<table class='table table-bordered'><thead class='thead-dark'><tr><th scope='col'>Field</th><th scope='col'>Data</th></tr></thead><tbody><tr><th scope='row'>ชื่อ</th><td>"+res.studentInfo.th_name+"</td></tr><tr><th scope='row'>คณะ</th><td>"+res.studentInfo.th_facName+"</td></tr><tr><th scope='row'>ภาควิชา</th><td>"+res.studentInfo.th_majorName+"</td></tr></tbody></table>")
-                  getGrade();
+                  getGrade(1);
                 }
                 else{
                   alert(res.codeError);
@@ -68,9 +64,8 @@ $(document).ready(function(){
                 }
             },
             error: function () {
-                tries+=1;
                 setTimeout(function () {
-                    getToken(data);
+                    getToken(data,tries+1);
                 }, 1000)
             }
         });
@@ -80,6 +75,6 @@ $(document).ready(function(){
        var nisitid = $("#nisitid").val();
        var password=$("#password").val();
        var data={username:nisitid,password:password};
-       getToken(data);
+       getToken(data,1);
     });
 });
