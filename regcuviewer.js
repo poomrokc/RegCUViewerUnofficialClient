@@ -3,7 +3,7 @@ var token ="";
 $(document).ready(function(){
     function getGrade(tries) {
         $('html, body').animate({scrollTop:$('#console').position().top}, 'slow');
-        $("#console").html("Status : Getting Step 2 grades (Attempt #"+tries.toString()+")... <img class='load' src='loading.gif' alt='.' />");
+        $("#console").html("Status : Getting Step 2 grades (Attempt #"+tries.toString()+")... <div class='load' />");
         $.ajax({
             type: "POST",
             url: proxy+"http://www3.reg.chula.ac.th/cureg-test/web/index.php?r=student-reg/getcr60",
@@ -46,7 +46,7 @@ $(document).ready(function(){
     function getToken(data,tries) {
         $("#step2data").html("Waiting for data...");
         $("#step1data").html("Waiting for data...");
-        $("#console").html("Status : Getting Step 1 token (Attempt #"+tries.toString()+")...  <img class='load' src='loading.gif' alt='.' />");
+        $("#console").html("Status : Getting Step 1 token (Attempt #"+tries.toString()+")...  <div class='load' />");
         $.ajax({
             type: "POST",
             url: proxy+"http://www3.reg.chula.ac.th/cureg-test/web/index.php?r=student-reg/login",
