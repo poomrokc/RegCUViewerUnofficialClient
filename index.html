@@ -34,10 +34,30 @@
       .ud {
         text-decoration:underline;
       }
-      .load {
-        margin-top:-3px;
-        height:20px;
-      }
+     .load {
+       display:inline-block;
+       position:relative;
+       top:4px;
+       border: 4px solid #E3E3E3;
+       border-radius: 50%;
+       border-top: 4px solid black;
+       width: 20px;
+       height: 20px;
+       -webkit-animation: spin 2s linear infinite; /* Safari */
+       animation: spin 2s linear infinite;
+       margin-top:20px;
+     }
+
+     /* Safari */
+     @-webkit-keyframes spin {
+       0% { -webkit-transform: rotate(0deg); }
+       100% { -webkit-transform: rotate(360deg); }
+     }
+
+     @keyframes spin {
+       0% { transform: rotate(0deg); }
+       100% { transform: rotate(360deg); }
+     }
     </style>
     <title>RegCUViewer Client</title>
   </head>
