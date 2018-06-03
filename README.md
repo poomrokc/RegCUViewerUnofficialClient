@@ -8,7 +8,7 @@ The current RegCUViewer app is pure s*** , on android it cannot be use , on ios 
 - View grades and simple information (I guess that's the only thing people use the app for)
 - **Retry automatically if the server does not respond (not including user error like wrong username/password)**
 ## How do you replicate the project?
-You can easily download both source code files and run **index.html** on your pc , this is a pure Client-Sided project.
+You can easily download both source code files , one cute loading GIF image and run **index.html** on your pc , this is a pure Client-Sided project.
 ## How did I do this without any access to the data server?
 I'll only breifly explain the process in case some of you want to try it too
 
