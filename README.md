@@ -1,5 +1,6 @@
 # RegCUViewerUnofficialClient 0.1.0 Alpha
 For Chulalongkorn University Students to view their grade early online without going through the app.
+## As CU's api(s) stopped responding and official RegCUViewer app has been removed from app store , it seems like they no longer want to continue the project. So this project is also declared dead (02/10/2018) , will update if the api(s) comes back on. 
  
 Live demo : https://poomrokc.services/regcuviewer/
 ## Why do I create this
